@@ -40,9 +40,9 @@
           <img src="{{ bookmark.post.pic }}" alt="" width="348" class="item__post-img">
         </a>
         <div class="item__descr">
+          <div class="item__descr">
         <p class="item__tag">{{ bookmark.post.text_tag |safe }}</p>
         </div>
-        <div class="item__descr">
         <p class="item__text">{{ bookmark.post.content_tag[:100] |safe }}.....
             <a href="/posts/{{ bookmark.post.id }}" class="item__btn-more">Еще</a></p>
         </div>

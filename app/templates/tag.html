@@ -40,10 +40,10 @@
         <a href="/posts/{{ post.id }}" class="item__post-link">
           <img src="{{ post.pic }}" alt="" width="348" class="item__post-img">
         </a>
-        <div class="item__tag">
-        <p class="item__tag">{{ post.text_tag |safe }}</p>
-        </div>
         <div class="item__descr">
+          <div class="item__descr">
+        <p class="item__tag">{{ bookmark.post.text_tag |safe }}</p>
+        </div>
           <a class="item__text">{{ post.content_tag[:100] |safe }}</a>
         </div>
         <div class="item__post-info">
