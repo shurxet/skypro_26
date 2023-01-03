@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn instance to serve flask-app
+After=network.target
+
+[Service]
+User=skypro
+Group=www-data
+WorkingDirectory=/home/skypro/flask_app
+Environment="PATH=/home/skypro/flask_app/venv/bin"
+ExecStart=/home/skypro/flask_app/venv/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
