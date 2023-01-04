@@ -31,7 +31,7 @@ class PostService(BaseService[PostDAO]):
     def get_posts_by_word(self, word: str):
 
         list_posts = self.get_all()
-        content = [x for x in list_posts if word.lower() in re.split(" |,|-|!|#|по", x.content)]
+        content = [x for x in list_posts if word.lower() in re.split(" |,|-|!|#", x.content)]
 
         return content
 
@@ -60,7 +60,7 @@ class PostService(BaseService[PostDAO]):
             post.text_tag = ""
             for i in re.split(" |,|-|!", post.content):
                 if '#' in i:
-                    post.text_tag += f"<a href=\"/tag/{i[1:]}\">{i}</a>"
+                    post.text_tag += f"<a href=\"/tag/{i[1:]}\">{i}</a><br>"
 
             self.dao.update(post)
 

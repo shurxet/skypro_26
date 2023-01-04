@@ -45,9 +45,7 @@
           <img src="{{ post.pic }}" alt="" width="348" class="item__post-img">
         </a>
         <div class="item__descr">
-          <div class="item__descr">
-        <p class="item__tag">{{ bookmark.post.text_tag |safe }}</p>
-        </div>
+          <p class="item__tag">{{ post.text_tag |safe }}</p>
           <p class="item__text">{{ post.content_tag[:100] |safe }}</p>
         </div>
         <div class="item__post-info">

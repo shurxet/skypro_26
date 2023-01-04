@@ -43,10 +43,8 @@
           <img src="{{ post.pic }}" alt="" width="348" class="item__post-img">
         </a>
         <div class="item__descr">
-          <div class="item__descr">
-        <p class="item__tag">{{ bookmark.post.text_tag |safe }}</p>
-        </div>
-          <a class="item__text">{{ post.content_tag |safe }}</a>
+          <p class="item__tag">{{ post.text_tag |safe }}</p>
+          <p class="item__text">{{ post.content_tag |safe }}</p>
         </div>
         <button type="button" class="item__bookmark-btn">
             <a href="/bookmarks/add/{{ post.id }}" class="item__btn-more">
