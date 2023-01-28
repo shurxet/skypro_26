@@ -23,3 +23,4 @@ def create_app(config_obj) -> Flask:
     app.register_blueprint(api_blueprint)
 
     return app
+
